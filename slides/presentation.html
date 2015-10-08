@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Software Testing Methodology</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="file:///Users/greg/Kent/software_testing_class/slides/theme/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="file:///Users/greg/Kent/software_testing_class/slides/theme/css/screen.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="file:///Users/greg/Kent/software_testing_class/slides/theme/js/slides.js"></script>
+    
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: lecture_5.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-1">
+          <div class="inner">
+            
+            <header><h1>Software Testing Methodology</h1></header>
+            
+            
+            <section><h2>Gregory S. DeLozier Ph.D.</h2>
+<h2>Fall 2015</h2>
+<h1>Lecture 5</h1></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture_5.md">lecture_5.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/6
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture_5.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-2">
+          <div class="inner">
+            
+            <header><h1>Agenda</h1></header>
+            
+            
+            <section><ul>
+<li>Show some virtual machine stuff</li>
+<li>
+<p>Continue with Chapter 5</p>
+<ul>
+<li>User interface</li>
+<li>Forms submission</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture_5.md">lecture_5.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/6
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture_5.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-3">
+          <div class="inner">
+            
+            <header><h1>Review</h1></header>
+            
+            
+            <section><p>To start:</p>
+<p><code>$ python3 manage.py runserver</code></p>
+<p>To run functional tests:</p>
+<p><code>$ python3 functional_tests.py</code></p>
+<p>To run unit tests:</p>
+<p><code>$ python3 manage.py test</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture_5.md">lecture_5.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/6
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture_5.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-4">
+          <div class="inner">
+            
+            <header><h1>Failing?</h1></header>
+            
+            
+            <section><p>The book says:
+- Add print statements, to show, eg, what the current page text is.
+- Improve the error message to show more info about the current state.
+- Manually visit the site yourself.
+- Use time.sleep to pause the test during execution.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture_5.md">lecture_5.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/6
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture_5.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-5">
+          <div class="inner">
+            
+            <header><h1>Structure of Tests</h1></header>
+            
+            
+            <section><ul>
+<li>Setup</li>
+<li>Exercise</li>
+<li>Assert</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture_5.md">lecture_5.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/6
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture_5.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-6">
+          <div class="inner">
+            
+            <header><h1>Code Cycle</h1></header>
+            
+            
+            <section><ul>
+<li>Red - write a test that fails</li>
+<li>Green - make it work even if cheating</li>
+<li>
+<p>Refactor</p>
+<ul>
+<li>Eliminate duplication</li>
+<li>Third duplicate rule</li>
+</ul>
+</li>
+<li>
+<p>Triangulation</p>
+<ul>
+<li>Write a better test</li>
+<li>Why does the problem bother you?</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture_5.md">lecture_5.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/6
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Software Testing Methodology</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">Agenda</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide3">Review</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide4">Failing?</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide5">Structure of Tests</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">Code Cycle</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
