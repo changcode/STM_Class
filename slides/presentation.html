@@ -28,14 +28,14 @@
     <title>Software Testing Methodology</title>
     <!-- Styles -->
     
-    <link rel="stylesheet" media="print" href="file:///Users/greg/Kent/software_testing_class/slides/theme/css/print.css">
-    <link rel="stylesheet" media="screen, projection" href="file:///Users/greg/Kent/software_testing_class/slides/theme/css/screen.css">
+    <link rel="stylesheet" media="print" href="theme/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="theme/css/screen.css">
     
     
     <!-- /Styles -->
     <!-- Javascripts -->
     
-    <script type="text/javascript" src="file:///Users/greg/Kent/software_testing_class/slides/theme/js/slides.js"></script>
+    <script type="text/javascript" src="theme/js/slides.js"></script>
     
     
     
@@ -49,7 +49,7 @@
     </div>
     <div class="slides">
       
-      <!-- slide source: lecture_5.md -->
+      <!-- slide source: lecture_7.md -->
       <div class="slide-wrapper">
         <div class="slide slide-1">
           <div class="inner">
@@ -59,7 +59,7 @@
             
             <section><h2>Gregory S. DeLozier Ph.D.</h2>
 <h2>Fall 2015</h2>
-<h1>Lecture 5</h1></section>
+<h1>Lecture 7</h1></section>
             
           </div>
           <div class="presenter_notes">
@@ -71,17 +71,17 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture_5.md">lecture_5.md</a>
+              Source: <a href="lecture_7.md">lecture_7.md</a>
             </aside>
             
             <aside class="page_number">
-              1/6
+              1/12
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: lecture_5.md -->
+      <!-- slide source: lecture_7.md -->
       <div class="slide-wrapper">
         <div class="slide slide-2">
           <div class="inner">
@@ -90,14 +90,10 @@
             
             
             <section><ul>
-<li>Show some virtual machine stuff</li>
-<li>
-<p>Continue with Chapter 5</p>
-<ul>
-<li>User interface</li>
-<li>Forms submission</li>
-</ul>
-</li>
+<li>More app progress</li>
+<li>Reviewing a white paper on tools</li>
+<li>An oracle-based project</li>
+<li>A testing challenge - tiny_db</li>
 </ul></section>
             
           </div>
@@ -110,30 +106,33 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture_5.md">lecture_5.md</a>
+              Source: <a href="lecture_7.md">lecture_7.md</a>
             </aside>
             
             <aside class="page_number">
-              2/6
+              2/12
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: lecture_5.md -->
+      <!-- slide source: lecture_7.md -->
       <div class="slide-wrapper">
         <div class="slide slide-3">
           <div class="inner">
             
-            <header><h1>Review</h1></header>
+            <header><h1>App Progress</h1></header>
             
             
-            <section><p>To start:</p>
-<p><code>$ python3 manage.py runserver</code></p>
-<p>To run functional tests:</p>
-<p><code>$ python3 functional_tests.py</code></p>
-<p>To run unit tests:</p>
-<p><code>$ python3 manage.py test</code></p></section>
+            <section><ul>
+<li>It is worthwhile to keep working through that app? </li>
+<li>Should we jump ahead to <ul>
+<li>UI</li>
+<li>Deployment</li>
+<li>Regression</li>
+</ul>
+</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -145,29 +144,30 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture_5.md">lecture_5.md</a>
+              Source: <a href="lecture_7.md">lecture_7.md</a>
             </aside>
             
             <aside class="page_number">
-              3/6
+              3/12
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: lecture_5.md -->
+      <!-- slide source: lecture_7.md -->
       <div class="slide-wrapper">
         <div class="slide slide-4">
           <div class="inner">
             
-            <header><h1>Failing?</h1></header>
+            <header><h1>Tools Paper</h1></header>
             
             
-            <section><p>The book says:
-- Add print statements, to show, eg, what the current page text is.
-- Improve the error message to show more info about the current state.
-- Manually visit the site yourself.
-- Use time.sleep to pause the test during execution.</p></section>
+            <section><ul>
+<li>This is a common format</li>
+<li>This is expensive research</li>
+<li>"Magic Quadrant" research</li>
+<li>Keep in mind the scale of these ideas</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -179,28 +179,33 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture_5.md">lecture_5.md</a>
+              Source: <a href="lecture_7.md">lecture_7.md</a>
             </aside>
             
             <aside class="page_number">
-              4/6
+              4/12
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: lecture_5.md -->
+      <!-- slide source: lecture_7.md -->
       <div class="slide-wrapper">
         <div class="slide slide-5">
           <div class="inner">
             
-            <header><h1>Structure of Tests</h1></header>
+            <header><h1>Testing Challenges</h1></header>
             
             
             <section><ul>
-<li>Setup</li>
-<li>Exercise</li>
-<li>Assert</li>
+<li>Web Sites<ul>
+<li>Exposed applications</li>
+<li>Accessible to technology</li>
+<li>Requirements are known</li>
+<li>Oracles are available</li>
+<li>BBST methods</li>
+</ul>
+</li>
 </ul></section>
             
           </div>
@@ -213,39 +218,31 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture_5.md">lecture_5.md</a>
+              Source: <a href="lecture_7.md">lecture_7.md</a>
             </aside>
             
             <aside class="page_number">
-              5/6
+              5/12
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: lecture_5.md -->
+      <!-- slide source: lecture_7.md -->
       <div class="slide-wrapper">
         <div class="slide slide-6">
           <div class="inner">
             
-            <header><h1>Code Cycle</h1></header>
+            <header><h1>Testing Challenges</h1></header>
             
             
             <section><ul>
-<li>Red - write a test that fails</li>
-<li>Green - make it work even if cheating</li>
-<li>
-<p>Refactor</p>
-<ul>
-<li>Eliminate duplication</li>
-<li>Third duplicate rule</li>
-</ul>
-</li>
-<li>
-<p>Triangulation</p>
-<ul>
-<li>Write a better test</li>
-<li>Why does the problem bother you?</li>
+<li>FOSS Packages<ul>
+<li>Easy to get</li>
+<li>Well understood</li>
+<li>Testable by usual methods</li>
+<li>Glass Box testing, perhaps</li>
+<li>Useful to community</li>
 </ul>
 </li>
 </ul></section>
@@ -260,11 +257,263 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture_5.md">lecture_5.md</a>
+              Source: <a href="lecture_7.md">lecture_7.md</a>
             </aside>
             
             <aside class="page_number">
-              6/6
+              6/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture_7.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-7">
+          <div class="inner">
+            
+            <header><h1>Oracle Project</h1></header>
+            
+            
+            <section><ul>
+<li>NY Public Library</li>
+<li>Online Card Catalog</li>
+<li>There are two versions<ul>
+<li>http://catalog.nypl.org</li>
+<li>http://browse.nypl.org</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture_7.md">lecture_7.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture_7.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-8">
+          <div class="inner">
+            
+            <header><h1>Acceptance Problem</h1></header>
+            
+            
+            <section><ul>
+<li>They search the same catalog</li>
+<li>You can search without an account</li>
+<li>Assuming the old one works<ul>
+<li>Does the new one work?</li>
+<li>Did they get what they paid for?</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture_7.md">lecture_7.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture_7.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-9">
+          <div class="inner">
+            
+            <header><h1>The Mission</h1></header>
+            
+            
+            <section><ul>
+<li>Define criteria for 'value'</li>
+<li>Define types of failures</li>
+<li>Devise a test plan</li>
+<li>Carry out the test plan</li>
+<li>Don't irritate the NYPL</li>
+<li>Constrain to non-member activities</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture_7.md">lecture_7.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture_7.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-10">
+          <div class="inner">
+            
+            <header><h1>Getting Started</h1></header>
+            
+            
+            <section><ul>
+<li>How to start?</li>
+<li>What to test?</li>
+<li>How to test? </li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture_7.md">lecture_7.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture_7.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-11">
+          <div class="inner">
+            
+            <header><h1>Homework A</h1></header>
+            
+            
+            <section><ul>
+<li>
+<p>Assess the NYPL new catalog</p>
+</li>
+<li>
+<p>Initial Report</p>
+<ul>
+<li>A test plan</li>
+<li>A test methodology</li>
+<li>A prototype of a test</li>
+</ul>
+</li>
+<li>
+<p>Conclusion Report</p>
+<ul>
+<li>A test report</li>
+<li>At least 10 specific requirements tested</li>
+<li>Automated tests</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture_7.md">lecture_7.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture_7.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-12">
+          <div class="inner">
+            
+            <header><h1>Homework B</h1></header>
+            
+            
+            <section><ul>
+<li>
+<p>Assess a potential software choice</p>
+<ul>
+<li>Python Package - tinydb</li>
+<li>For use as a small store customer database</li>
+<li>Potentially 1000 customers, 500 items/customer</li>
+<li>TinyDB is easy to use, they say</li>
+<li>vs SQLite</li>
+</ul>
+</li>
+<li>
+<p>Tinydb </p>
+<ul>
+<li>Small database package</li>
+<li>( small demo forthcoming ) </li>
+<li>https://github.com/msiemens/tinydb</li>
+<li>https://tinydb.readthedocs.org
+-(Faster with 'ujson' -- see https://pypi.python.org/pypi/ujson) 
+-(Also: https://github.com/msiemens/tinydb/blob/master/docs/usage.rst)</li>
+</ul>
+</li>
+<li>
+<p>Same approach and mission as "A"</p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture_7.md">lecture_7.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/12
             </aside>
           </footer>
         </div>
@@ -291,26 +540,62 @@
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">Review</a></th>
+        <th><a href="#slide3">App Progress</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Failing?</a></th>
+        <th><a href="#slide4">Tools Paper</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Structure of Tests</a></th>
+        <th><a href="#slide5">Testing Challenges</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">Code Cycle</a></th>
+        <th><a href="#slide6">Testing Challenges</a></th>
         <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">Oracle Project</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">Acceptance Problem</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">The Mission</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">Getting Started</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">Homework A</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">Homework B</a></th>
+        <td><a href="#slide12">12</a></td>
       </tr>
       
       

@@ -27,12 +27,20 @@ class SmokeTest(TestCase):
         request.method = 'POST' 
         request.POST['item_text'] = 'A new list item'
         response = home_page(request)
-        self.assertIn('A new list item', response.content.decode())
-        expected_html = render_to_string(
-            'home.html',
-            {'new_item_text':  'A new list item'}
-        )
-        self.assertEqual(response.content.decode(), expected_html)
+        
+        self.assertEqual(Item.objects.count(), 1)
+        new_item = Item.objects.first()
+        self.assertEqual(new_item.text, 'A new list item')
+        
+        #self.assertIn('A new list item', response.content.decode())
+        #expected_html = render_to_string(
+        #    'home.html',
+        #    {'new_item_text':  'A new list item'}
+        #)
+        #self.assertEqual(response.content.decode(), expected_html)
+        
+        self.assertEqual(response.status_code,302)
+        self.assertEqual(response['location'],'/')
         
 from lists.models import Item
 
